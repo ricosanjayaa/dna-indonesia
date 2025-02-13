@@ -14,7 +14,7 @@ import BackButton from "@/components/BackButton.component";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://dnaindonesia.id";
 
 interface PostProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 interface PostFrontmatter {
@@ -33,26 +33,23 @@ interface PostData {
 }
 
 const getPost = async (slug: string): Promise<PostData | null> => {
-  try {
-    const filePath = path.join(process.cwd(), "posts", `${slug}.mdx`);
-    if (!fs.existsSync(filePath)) return null;
-    const fileContent = fs.readFileSync(filePath, "utf8");
-    const { data, content } = matter(fileContent);
+  const filePath = path.join(process.cwd(), "posts", `${slug}.mdx`);
+  if (!fs.existsSync(filePath)) return null;
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  const { data, content } = matter(fileContent);
 
-    const frontmatter: PostFrontmatter = {
-      title: data.title,
-      description: data.description,
-      author: data.author,
-      date: data.date,
-      image: data.image,
-      keywords: data.keywords,
-    };
+  if (!data.title || !data.description || !data.author || !data.date) throw new Error(`Invalid frontmatter in post ${slug}. Missing required fields.`);
 
-    return { slug, frontmatter, content };
-  } catch (error) {
-    console.error("Error in getPost:", error);
-    return null;
-  }
+  const frontmatter: PostFrontmatter = {
+    title: data.title,
+    description: data.description,
+    author: data.author,
+    date: data.date,
+    image: data.image,
+    keywords: data.keywords,
+  };
+
+  return { slug, frontmatter, content };
 };
 
 const getAllPosts = async (): Promise<PostData[]> => {
