@@ -1,7 +1,18 @@
-import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+// Use only serializable options
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  options: {
+    // Avoid passing non-serializable plugins directly here
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
+
+/** @type {import("next").NextConfig} */
+const nextConfig = {
+  pageExtensions: ["ts", "tsx", "md", "mdx"],
 };
 
-export default nextConfig;
+export default withMDX(nextConfig);
