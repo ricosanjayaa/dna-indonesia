@@ -43,14 +43,19 @@ const getPosts = () => {
   return filenames.map((filename) => {
     const filePath = path.join(postsDirectory, filename);
     const fileContent = fs.readFileSync(filePath, "utf8");
-    const { data } = matter(fileContent);
+    const { data, content } = matter(fileContent);
+
+    const wordCount = content.split(/\s+/).length;
+    const readingTime = Math.ceil(wordCount / 200);
 
     return {
       slug: filename.replace(/\.mdx?$/, ""),
-      frontmatter: data,
+      frontmatter: { ...data },
+      readingTime
     };
   });
 };
+
 
 export default function Blog() {
   const posts = getPosts();
@@ -64,7 +69,7 @@ export default function Blog() {
             <Link href={`/blog/${post.slug}`} key={index} className="flex flex-col gap-2 group-hover:opacity-50 hover:!opacity-100 transition-all duration-200">
               <img className="rounded-md w-full aspect-video object-cover" src={post.frontmatter.image} alt={post.frontmatter.title} />
               <Text className="!text-lg font-semibold !text-primary">{post.frontmatter.title}</Text>
-              <Text className="-mt-2 flex flex-row gap-2"><span>{post.frontmatter.author}</span><span>·</span><span>{moment(post.frontmatter.date, "YYYYMMDD").fromNow()}</span></Text>
+              <Text className="-mt-2 flex flex-row gap-2"><span>{moment(post.frontmatter.date, "YYYYMMDD").fromNow()}</span><span>•</span><span>{post.readingTime > 1 ? `${post.readingTime} mins read` : "1 min read"} by {post.frontmatter.author}</span></Text>
               <Text>{post.frontmatter.description}</Text>
             </Link>
           ))}

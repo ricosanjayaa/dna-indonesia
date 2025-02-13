@@ -30,6 +30,7 @@ interface PostData {
   slug: string;
   frontmatter: PostFrontmatter;
   content: string;
+  readingTime: number;
 }
 
 const getPost = async (slug: string): Promise<PostData | null> => {
@@ -40,6 +41,9 @@ const getPost = async (slug: string): Promise<PostData | null> => {
 
   if (!data.title || !data.description || !data.author || !data.date) throw new Error(`Invalid frontmatter in post ${slug}. Missing required fields.`);
 
+  const wordCount = content.split(/\s+/).length;
+  const readingTime = Math.ceil(wordCount / 200);
+
   const frontmatter: PostFrontmatter = {
     title: data.title,
     description: data.description,
@@ -49,7 +53,7 @@ const getPost = async (slug: string): Promise<PostData | null> => {
     keywords: data.keywords,
   };
 
-  return { slug, frontmatter, content };
+  return { slug, frontmatter, content, readingTime };
 };
 
 const getAllPosts = async (): Promise<PostData[]> => {
@@ -135,9 +139,8 @@ export default async function Post({ params }: PostProps) {
                 <p className="text-2xl md:text-4xl text-primary text-center">{index + 1}</p>
                 <div className="flex flex-col gap-2 col-span-11">
                   <Text className="!text-base font-medium">{post.frontmatter.title}</Text>
-                  <Text className="-mt-2 flex flex-row gap-2"><span>{post.frontmatter.author}</span><span>·</span><span>{moment(post.frontmatter.date, "YYYYMMDD").fromNow()}</span></Text>
+                  <Text className="-mt-2 flex flex-row gap-2"><span>{moment(post.frontmatter.date, "YYYYMMDD").fromNow()}</span><span>•</span><span>{post.readingTime > 1 ? `${post.readingTime} mins read` : "1 min read"} by {post.frontmatter.author}</span></Text>
                   <Text>{post.frontmatter.description}</Text>
-                  <img className="rounded-md w-full aspect-[16/5] object-cover" src={post.frontmatter.image} alt={post.frontmatter.title} />
                 </div>
               </Link>
             ))}
