@@ -59,16 +59,13 @@ export default function Blog() {
     <>
       <Section className="gap-4" header="Blog">
         <Text className="-mt-2">Temukan insight terbaru seputar tren digital, strategi pemasaran, dan tips konten kreatif di blog kami. Kami menghadirkan artikel informatif dan inspiratif untuk membantu Anda mengembangkan brand serta meningkatkan kehadiran online. Tetap update dengan strategi terbaik untuk mencapai audiens yang lebih luas!</Text>
-        <section className="group">
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 group">
           {posts.map((post, index) => (
-            <Link href={`/blog/${post.slug}`} key={index} className="py-4 grid grid-cols-12 gap-4 md:gap-8 group-hover:opacity-50 hover:!opacity-100 transition-all duration-200">
-              <p className="text-2xl md:text-4xl text-primary text-center">{index + 1}</p>
-              <div className="flex flex-col gap-2 col-span-11">
-                <Text className="!text-base font-medium">{post.frontmatter.title}</Text>
-                <Text className="-mt-2 flex flex-row gap-2"><span>{post.frontmatter.author}</span><span>·</span><span>{moment(post.frontmatter.date, "YYYYMMDD").fromNow()}</span></Text>
-                <Text>{post.frontmatter.description}</Text>
-                <img className="rounded-md w-full aspect-[16/5] object-cover" src={post.frontmatter.image} alt={post.frontmatter.title} />
-              </div>
+            <Link href={`/blog/${post.slug}`} key={index} className="flex flex-col gap-2 group-hover:opacity-50 hover:!opacity-100 transition-all duration-200">
+              <img className="rounded-md w-full aspect-video object-cover" src={post.frontmatter.image} alt={post.frontmatter.title} />
+              <Text className="!text-lg font-semibold !text-primary">{post.frontmatter.title}</Text>
+              <Text className="-mt-2 flex flex-row gap-2"><span>{post.frontmatter.author}</span><span>·</span><span>{moment(post.frontmatter.date, "YYYYMMDD").fromNow()}</span></Text>
+              <Text>{post.frontmatter.description}</Text>
             </Link>
           ))}
         </section>
