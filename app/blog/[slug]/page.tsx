@@ -33,23 +33,26 @@ interface PostData {
 }
 
 const getPost = async (slug: string): Promise<PostData | null> => {
-  const filePath = path.join(process.cwd(), "posts", `${slug}.mdx`);
-  if (!fs.existsSync(filePath)) return null;
-  const fileContent = fs.readFileSync(filePath, "utf8");
-  const { data, content } = matter(fileContent);
+  try {
+    const filePath = path.join(process.cwd(), "posts", `${slug}.mdx`);
+    if (!fs.existsSync(filePath)) return null;
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    const { data, content } = matter(fileContent);
 
-  if (!data.title || !data.description || !data.author || !data.date) throw new Error(`Invalid frontmatter in post ${slug}. Missing required fields.`);
+    const frontmatter: PostFrontmatter = {
+      title: data.title,
+      description: data.description,
+      author: data.author,
+      date: data.date,
+      image: data.image,
+      keywords: data.keywords,
+    };
 
-  const frontmatter: PostFrontmatter = {
-    title: data.title,
-    description: data.description,
-    author: data.author,
-    date: data.date,
-    image: data.image,
-    keywords: data.keywords,
-  };
-
-  return { slug, frontmatter, content };
+    return { slug, frontmatter, content };
+  } catch (error) {
+    console.error("Error in getPost:", error);
+    return null;
+  }
 };
 
 const getAllPosts = async (): Promise<PostData[]> => {
@@ -146,4 +149,11 @@ export default async function Post({ params }: PostProps) {
       </Section>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
