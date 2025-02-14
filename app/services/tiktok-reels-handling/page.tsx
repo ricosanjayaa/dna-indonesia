@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 
 import Text from "@/components/Text.component";
 import { Button } from "@/components/ui/button";
@@ -146,19 +145,19 @@ export default function TiktokReelsHandlingPage() {
       <Section className="!gap-8 !pb-8 md:!pb-12">
         <MarqueeExtended>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
+            <img className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
+            <img className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
+            <img className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
+            <img className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
+            <img className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
           </div>
         </MarqueeExtended>
 
@@ -183,7 +182,7 @@ export default function TiktokReelsHandlingPage() {
       </Section>
 
       <section className="grid md:grid-cols-3 gap-4 md:gap-0">
-        <Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_reels_1.png" alt="Portofolio Tiktok & Reels Handling DNA Indonesia" />
+        <img className="h-full aspect-square object-cover rounded-md" src="/portofolio_reels_1.png" alt="Portofolio Tiktok & Reels Handling DNA Indonesia" />
         <Section className="md:w-4/5 mx-auto md:col-span-2 gap-4" title="smm #1 di indonesia" header="Miliki tim admin sosmed yang profesional tanpa ribet!" >
           <Text className="-mt-2">Saatnya membuat bisnis makin dikenal melalui sosial media. Tanpa perlu kehilangan banyak waktu, biaya dan pikiran dengan bekerjasama bersama DNA Indonesia yang sudah dipercaya 100+ klien.</Text>
           <ul className="space-y-1 list-disc list-inside text-xs md:text-sm text-foreground/75 hover:text-foreground transition-all duration-200">
@@ -216,7 +215,7 @@ export default function TiktokReelsHandlingPage() {
             </div>
           </div>
         </Section>
-        <Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_reels_2.png" alt="Portofolio DNA Indonesia" />
+        <img className="h-full aspect-square object-cover rounded-md" src="/portofolio_reels_2.png" alt="Portofolio DNA Indonesia" />
       </section>
 
       <Section className="gap-4" header="Jasa Digital Marketing">

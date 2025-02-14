@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 
 import Section from "@/components/Section.component";
 import Text from "@/components/Text.component";
@@ -65,7 +64,7 @@ export default function AboutPage() {
       </section>
 
       <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-y-0 gap-x-6">
-        <div className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/about.png" alt="DNA Indonesia" /></div>
+        <div className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/about.png" alt="DNA Indonesia" /></div>
         <Section className="lg:col-span-2 gap-4" title="about us" header={`${new Date().getFullYear() - 2017} Tahun Telah Melayani`}>
           <Text className="-mt-2">Berawal dari Komunitas di Tahun 2017 dan DNA Indonesia telah hadir dengan legalitas PT pada 2021. Perusahaan kami berdedikasi dalam hal Digital Marketing terutama melalui Social Media.</Text>
           <Text className="-mt-2">Dengan latar belakang banyak pelaku usaha yang menggunakan social media sebagai platform pemasarannya serta merekrut tim, partner hingga profesional worker dalam ruang lingkup kreatif dan digital marketing seperti Graphic Designer, Content Writer maupun Copywriter sampai ke Social Media Officer. DNA Indonesia sangat terbuka dan memiliki tujuan untuk membantu para UMKM menuju Go-Digital.</Text>
@@ -78,10 +77,10 @@ export default function AboutPage() {
           <Button asChild className="w-fit"><Link target="__blank" href="https://api.whatsapp.com/send?phone=6282254557998&text=Halo!%20Saya%20tertarik%20dengan%20jasa%20DNA%20Indonesia.%20Bisa%20jelaskan%20lebih%20lengkap%3F%20">Konsultasi sekarang</Link></Button>
         </Section>
         <CarouselExtended>
-          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_1.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_2.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_3.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_4.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_1.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_2.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_3.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_4.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
         </CarouselExtended>
       </section>
 
@@ -97,19 +96,19 @@ export default function AboutPage() {
       <Section className="py-8 md:py-12 w-full mx-auto flex flex-col gap-4 text-center" header="DNA Indonesia, Pilihan Berbagai Brand!">
         <MarqueeExtended>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
+            <img className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
+            <img className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
+            <img className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
+            <img className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
+            <img className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
           </div>
         </MarqueeExtended>
       </Section>

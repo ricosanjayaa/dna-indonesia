@@ -8,7 +8,6 @@ import MarqueeExtended from "@/components/MarqueeExtended.component";
 import Portofolio from "@/components/Portofolio.component";
 import CarouselExtended from "@/components/CarouselExtended.component";
 import { CarouselItem } from "@/components/ui/carousel";
-import Image from "next/image";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://dnaindonesia.id";
 
@@ -49,28 +48,28 @@ export default function PhotoVideoVisitPage() {
 
       <MarqueeExtended>
         <div className="flex justify-center items-center h-20 aspect-video mx-6">
-          <Image width={1080} height={1080} className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
+          <img className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
         </div>
         <div className="flex justify-center items-center h-20 aspect-video mx-6">
-          <Image width={1080} height={1080} className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
+          <img className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
         </div>
         <div className="flex justify-center items-center h-20 aspect-video mx-6">
-          <Image width={1080} height={1080} className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
+          <img className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
         </div>
         <div className="flex justify-center items-center h-20 aspect-video mx-6">
-          <Image width={1080} height={1080} className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
+          <img className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
         </div>
         <div className="flex justify-center items-center h-20 aspect-video mx-6">
-          <Image width={1080} height={1080} className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
+          <img className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
         </div>
       </MarqueeExtended>
 
       <section className="grid md:grid-cols-3 gap-4 md:gap-0">
         <CarouselExtended>
-          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_1.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_2.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_3.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_4.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_1.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_2.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_3.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_4.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
         </CarouselExtended>
         <Section className="md:w-4/5 mx-auto md:col-span-2 gap-4" title="instagram handling" header="Kelola Instagram lebih profesional dengan konten kreatif, desain menarik, dan strategi engagement yang tepat." >
           <Text>Layanan Instagram Handling lengkap: dari ide kreatif, desain visual, strategi marketing, riset hashtag, penjadwalan, hingga laporan performa bulanan untuk pertumbuhan optimal.</Text>
@@ -89,7 +88,7 @@ export default function PhotoVideoVisitPage() {
       </section>
 
       <section className="grid md:grid-cols-3 gap-4 md:gap-0">
-        <Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_reels_1.png" alt="Portofolio Tiktok & Reels Handling DNA Indonesia" />
+        <img className="h-full aspect-square object-cover rounded-md" src="/portofolio_reels_1.png" alt="Portofolio Tiktok & Reels Handling DNA Indonesia" />
         <Section className="md:w-4/5 mx-auto md:col-span-2 gap-4" title="tiktok & reels handling" header="Buat video pendek yang engaging dan mengikuti tren untuk meningkatkan brand awareness di TikTok & Instagram Reels." >
           <Text>Layanan TikTok & Reels Handling kami mencakup konsep kreatif, perencanaan konten, caption, riset hashtag, penjadwalan, dan laporan performa bulanan untuk meningkatkan kehadiran brand Anda.</Text>
           <ul className="space-y-1 list-disc list-inside text-xs md:text-sm text-foreground/75 hover:text-foreground transition-all duration-200">
@@ -107,7 +106,7 @@ export default function PhotoVideoVisitPage() {
       </section>
 
       <section className="grid md:grid-cols-3 gap-4 md:gap-0">
-        <Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_photo_1.png" alt="Portofolio Photo Product Service DNA Indonesia" />
+        <img className="h-full aspect-square object-cover rounded-md" src="/portofolio_photo_1.png" alt="Portofolio Photo Product Service DNA Indonesia" />
         <Section className="md:w-4/5 mx-auto md:col-span-2 gap-4" title="photo product service" header="Foto produk berkualitas tinggi yang menarik dan profesional untuk meningkatkan daya tarik brand Anda." >
           <Text>Layanan Photo Product Service kami siap meningkatkan visual produk Anda dengan pemotretan profesional dan strategi promosi.</Text>
           <ul className="space-y-1 list-disc list-inside text-xs md:text-sm text-foreground/75 hover:text-foreground transition-all duration-200">
@@ -125,9 +124,9 @@ export default function PhotoVideoVisitPage() {
 
       <section className="grid md:grid-cols-3 gap-4 md:gap-0">
         <CarouselExtended>
-          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_4.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_5.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_6.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_4.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_5.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_6.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
         </CarouselExtended>
         <Section className="md:w-4/5 mx-auto md:col-span-2 gap-4" title="photo & video visit" header="Layanan foto dan video on-site untuk kebutuhan branding, promosi, dan dokumentasi bisnis." >
           <Text>Layanan Photo & Video Services kami mencakup pengambilan, pengeditan, hingga pembuatan caption dan laporan performa untuk mendukung bisnis Anda.</Text>

@@ -6,7 +6,6 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { Url } from "next/dist/shared/lib/router/router";
-import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 
@@ -35,7 +34,7 @@ export default function NavigationBar() {
     <div className="fixed top-4 left-0 right-0 z-[10000] w-full max-w-5xl mx-auto px-4">
       <nav className="p-4 bg-background/60 backdrop-blur-xl rounded-xl border-2 border-foreground/5">
         <div className="flex items-center justify-between">
-          <Link href="/"><Image width={1080} height={1080} className="h-8" src="/dna_logo.png" alt="DNA Indonesia" /></Link>
+          <Link href="/"><img className="h-8" src="/dna_logo.png" alt="DNA Indonesia" /></Link>
 
           <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
