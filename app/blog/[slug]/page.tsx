@@ -126,7 +126,7 @@ export default async function Post({ params }: PostProps) {
       <BackButton />
       <Section header={frontmatter.title} className="-mt-8 flex flex-col gap-8">
         <Text className="-mt-6">{frontmatter.description}</Text>
-        <Image className="w-full aspect-video object-cover rounded-md" src={frontmatter.image} alt="Portofolio DNA Indonesia" />
+        <Image width={1080} height={1080} className="w-full aspect-video object-cover rounded-md" src={frontmatter.image} alt="Portofolio DNA Indonesia" />
 
         <div className="prose max-w-none">
           <MDXRemote source={content} />

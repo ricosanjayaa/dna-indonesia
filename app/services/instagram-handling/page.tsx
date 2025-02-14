@@ -150,19 +150,19 @@ export default function InstagramHandlingPage() {
       <Section className="!gap-8 !pb-8 md:!pb-12">
         <MarqueeExtended>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
+            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
+            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
+            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
+            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <Image className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
+            <Image width={1080} height={1080} className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
           </div>
         </MarqueeExtended>
 
@@ -188,10 +188,10 @@ export default function InstagramHandlingPage() {
 
       <section className="grid md:grid-cols-3 gap-4 md:gap-0">
         <CarouselExtended>
-          <CarouselItem className="h-full w-full"><Image className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_1.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><Image className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_2.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><Image className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_3.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><Image className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_4.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_1.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_2.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_3.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><Image width={1080} height={1080} className="h-full aspect-square object-cover rounded-md" src="/portofolio_instagram_4.png" alt="Portofolio Instagram Handling DNA Indonesia" /></CarouselItem>
         </CarouselExtended>
         <Section className="md:w-4/5 mx-auto md:col-span-2 gap-4" title="smm #1 di indonesia" header="Miliki tim admin sosmed yang profesional tanpa ribet!" >
           <Text className="-mt-2">Saatnya membuat bisnis makin dikenal melalui sosial media. Tanpa perlu kehilangan banyak waktu, biaya dan pikiran dengan bekerjasama bersama DNA Indonesia yang sudah dipercaya 100+ klien.</Text>
@@ -204,7 +204,7 @@ export default function InstagramHandlingPage() {
       </section>
 
       <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-y-0 gap-x-6">
-        <Image className="md:order-2 h-full aspect-square object-cover rounded-md" src="/portofolio_desain.png" alt="Portofolio DNA Indonesia" />
+        <Image width={1080} height={1080} className="md:order-2 h-full aspect-square object-cover rounded-md" src="/portofolio_desain.png" alt="Portofolio DNA Indonesia" />
         <Section className="md:order-1 lg:col-span-2 gap-4" header="Mengapa harus manajemen sosial media bersama DNA Indonesia?">
           <Text className="-mt-2">From nothing to everything! Lebih dari sekedar mengelola, kami mengurus semuanya mulai dari strategi, pembuatan konten, campaign, hingga evaluasi untuk mencapai goal yang telah ditentukan.</Text>
           <div className="mt-4 grid grid-cols-2 gap-4 text-center md:text-left">

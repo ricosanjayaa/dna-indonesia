@@ -68,7 +68,7 @@ export default function Blog() {
         <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 group">
           {posts.map((post, index) => (
             <Link href={`/blog/${post.slug}`} key={index} className="flex flex-col gap-2 group-hover:opacity-50 hover:!opacity-100 transition-all duration-200">
-              <Image className="rounded-md w-full aspect-video object-cover" src={post.frontmatter.image} alt={post.frontmatter.title} />
+              <Image width={1080} height={1080} className="rounded-md w-full aspect-video object-cover" src={post.frontmatter.image} alt={post.frontmatter.title} />
               <Text className="!text-lg font-semibold !text-primary">{post.frontmatter.title}</Text>
               <Text className="-mt-2 flex flex-row gap-2"><span>{moment(post.frontmatter.date, "YYYYMMDD").fromNow()}</span><span>•</span><span>{post.readingTime > 1 ? `${post.readingTime} mins read` : "1 min read"} by {post.frontmatter.author}</span></Text>
               <Text>{post.frontmatter.description}</Text>
