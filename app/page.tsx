@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 
 import MarqueeExtended from "@/components/MarqueeExtended.component";
 import { FrequentlyAskedQuestions } from "@/components/FrequentlyAskedQuestions.component";
@@ -74,24 +75,24 @@ export default function LandingPage() {
 
       <MarqueeExtended>
         <div className="flex justify-center items-center h-20 aspect-video mx-6">
-          <img className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
+          <Image className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
         </div>
         <div className="flex justify-center items-center h-20 aspect-video mx-6">
-          <img className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
+          <Image className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
         </div>
         <div className="flex justify-center items-center h-20 aspect-video mx-6">
-          <img className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
+          <Image className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
         </div>
         <div className="flex justify-center items-center h-20 aspect-video mx-6">
-          <img className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
+          <Image className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
         </div>
         <div className="flex justify-center items-center h-20 aspect-video mx-6">
-          <img className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
+          <Image className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
         </div>
       </MarqueeExtended>
 
       <section className="grid md:grid-cols-3 gap-4 md:gap-0">
-        <img src="/portofolio_desain.png" alt="Portofolio DNA Indonesia" />
+        <Image src="/portofolio_desain.png" alt="Portofolio DNA Indonesia" />
         <Section className="md:w-4/5 mx-auto md:col-span-2 gap-4" title="about us" header="All-in-one creative digital agency" >
           <Text className="-mt-2">Media sosial adalah arena kami, dan dengan tim ahli yang berdedikasi serta pemahaman mendalam tentang dinamika serta algoritma terkini, kami memastikan setiap pesan yang Anda sampaikan dapat menjangkau audiens yang tepat secara efektif dan maksimal.</Text>
         </Section>

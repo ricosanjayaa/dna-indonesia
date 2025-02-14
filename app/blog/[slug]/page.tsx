@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import moment from "moment";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
 import Section from "@/components/Section.component";
 import Text from "@/components/Text.component";
@@ -125,7 +126,7 @@ export default async function Post({ params }: PostProps) {
       <BackButton />
       <Section header={frontmatter.title} className="-mt-8 flex flex-col gap-8">
         <Text className="-mt-6">{frontmatter.description}</Text>
-        <img className="w-full aspect-video object-cover rounded-md" src={frontmatter.image} alt="Portofolio DNA Indonesia" />
+        <Image className="w-full aspect-video object-cover rounded-md" src={frontmatter.image} alt="Portofolio DNA Indonesia" />
 
         <div className="prose max-w-none">
           <MDXRemote source={content} />

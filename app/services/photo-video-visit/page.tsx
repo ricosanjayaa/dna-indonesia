@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 import Text from "@/components/Text.component";
 import { Button } from "@/components/ui/button";
@@ -141,19 +142,19 @@ export default function PhotoVideoVisitPage() {
       <Section className="!gap-8 !pb-8 md:!pb-12">
         <MarqueeExtended>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <img className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
+            <Image className="h-full w-full object-contain" src="/ecolink.png" alt="e-COLINK" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <img className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
+            <Image className="h-full w-full object-contain" src="/energizing_borneo.png" alt="Energizing BORNEO" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <img className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
+            <Image className="h-full w-full object-contain" src="/kopisetia.png" alt="KOPI SETIA" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <img className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
+            <Image className="h-full w-full object-contain" src="/pertamina.png" alt="Pertamina" />
           </div>
           <div className="flex justify-center items-center h-20 aspect-video mx-6">
-            <img className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
+            <Image className="h-full w-full object-contain" src="/yamaha.png" alt="YAMAHA" />
           </div>
         </MarqueeExtended>
 
@@ -179,9 +180,9 @@ export default function PhotoVideoVisitPage() {
 
       <section className="grid md:grid-cols-3 gap-4 md:gap-0">
         <CarouselExtended>
-          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_1.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_2.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_3.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><Image className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_1.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><Image className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_2.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><Image className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_3.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
         </CarouselExtended>
         <Section className="md:w-4/5 mx-auto md:col-span-2 gap-4" title="smm #1 di indonesia" header="Berikan Tampilan Eksklusif pada Produk Anda dengan Layanan Photo & Video Berkualitas Tinggi!" >
           <Text className="-mt-2">Perkenalkan product anda dengan tampilan yang berbeda dengan foto dan video yang berkualitas tinggi! Menghemat waktu, biaya, dan tenaga anda dengan dibantu oleh DNA Indonesia, yang telah dipercaya oleh 100+ klien untuk menarik lebih banyak perhatian pada produk mereka.</Text>
@@ -195,9 +196,9 @@ export default function PhotoVideoVisitPage() {
 
       <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-y-0 gap-x-6">
         <CarouselExtended className="md:order-2">
-          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_4.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_5.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
-          <CarouselItem className="h-full w-full"><img className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_6.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><Image className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_4.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><Image className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_5.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
+          <CarouselItem className="h-full w-full"><Image className="h-full aspect-square object-cover rounded-md" src="/portofolio_visit_6.jpg" alt="Portofolio Photo Video Visit DNA Indonesia" /></CarouselItem>
         </CarouselExtended>
         <Section className="md:order-1 lg:col-span-2 gap-4" header="Mengapa harus jasa photo dan video visit dengan DNA Indonesia?">
           <Text className="-mt-2">Kami menghasilkan foto dan video berkualitas tinggi dengan tim profesional. Setiap karya dirancang untuk memaksimalkan potensi produk Anda, menciptakan visualisasi yang memukau dan memuaskan.</Text>
